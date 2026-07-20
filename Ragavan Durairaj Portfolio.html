@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ragavan Durairaj | SRE & GenAI Innovation Lead</title>
+    <meta name="description" content="Portfolio of Ragavan Durairaj - SRE and Generative AI Innovation Lead with 7+ years of experience in Site Reliability Engineering, AI/ML, Cloud Platforms, and Agentic AI.">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Devicon Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Dark Mode Color Palette */
+            --bg-primary: #090d16;
+            --bg-secondary: #111827;
+            --bg-card: rgba(17, 24, 39, 0.75);
+            --bg-card-hover: rgba(30, 41, 59, 0.85);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(56, 189, 248, 0.4);
+            
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            
+            --accent-blue: #38bdf8;
+            --accent-indigo: #6366f1;
+            --accent-purple: #a855f7;
+            --accent-teal: #14b8a6;
+            --accent-amber: #f59e0b;
+            
+            --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #6366f1 50%, #a855f7 100%);
+            --accent-glow: rgba(56, 189, 248, 0.25);
+            
+            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+            --glass-blur: blur(16px);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        [data-theme="light"] {
+            /* Light Mode Color Palette */
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --bg-card: rgba(255, 255, 255, 0.85);
+            --bg-card-hover: rgba(241, 245, 249, 0.95);
+            --border-color: rgba(0, 0, 0, 0.08);
+            --border-hover: rgba(2, 132, 199, 0.4);
+            
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            
+            --accent-blue: #0284c7;
+            --accent-indigo: #4f46e5;
+            --accent-purple: #9333ea;
+            --accent-teal: #0d9488;
+            --accent-amber: #d97706;
+            
+            --accent-gradient: linear-gradient(135deg, #0284c7 0%, #4f46e5 50%, #9333ea 100%);
+            --accent-glow: rgba(2, 132, 199, 0.15);
+            
+            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        h1, h2, h3, h4, .brand-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        code, .font-mono {
+            font-family: 'Fira Code', monospace;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            padding: 5.5rem 0;
+            position: relative;
+        }
+
+        /* Gradient & Glass Helpers */
+        .gradient-text {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .glass-card {
+            background: var(--bg-card);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.75rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .glass-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3.5rem auto;
+        }
+
+        .section-badge {
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--accent-blue);
+            padding: 0.3rem 0.8rem;
+            background: rgba(56, 189, 248, 0.1);
+            border-radius: 30px;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+
+        /* Header Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(9, 13, 22, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        [data-theme="light"] .navbar {
+            background: rgba(248, 250, 252, 0.85);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 76px;
+        }
+
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .logo-badge {
+            background: var(--accent-gradient);
+            color: #fff;
+            padding: 0.35rem 0.65rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 800;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.75rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 0.92rem;
+            position: relative;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-blue);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .theme-toggle {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            color: var(--accent-blue);
+            border-color: var(--accent-blue);
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.4rem;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            outline: none;
+        }
+
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: #ffffff;
+            box-shadow: 0 4px 15px var(--accent-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px var(--accent-glow);
+            color: #ffffff;
+        }
+
+        .btn-outline {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+            transform: translateY(-2px);
+        }
+
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            border-radius: 8px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 140px;
+            padding-bottom: 80px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1.1rem;
+            border-radius: 50px;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            color: var(--accent-blue);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-blue);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-blue);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(1.3); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.2rem;
+            font-weight: 800;
+        }
+
+        .hero-subtitle {
+            font-size: 1.35rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-description {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 2.2rem;
+            max-width: 620px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Profile Card Graphic */
+        .profile-card {
+            text-align: center;
+            position: relative;
+        }
+
+        .profile-avatar-wrapper {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 1.25rem;
+            border-radius: 50%;
+            background: var(--accent-gradient);
+            padding: 4px;
+            box-shadow: 0 10px 30px var(--accent-glow);
+        }
+
+        .profile-avatar-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: var(--bg-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.2rem;
+            color: var(--accent-blue);
+        }
+
+        .tech-pill-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .tech-pill {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.7rem;
+            border-radius: 20px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+
+        /* Counter Bar */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3.5rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .stat-number {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 0.2rem;
+        }
+
+        /* Executive Summary & Personal */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 2rem;
+        }
+
+        .info-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+        }
+
+        .info-item i {
+            color: var(--accent-blue);
+            width: 18px;
+        }
+
+        /* Timeline / Experience */
+        .timeline {
+            position: relative;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 2px;
+            background: var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 55px;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 11px;
+            top: 4px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+            border: 4px solid var(--bg-primary);
+            box-shadow: 0 0 10px var(--accent-blue);
+        }
+
+        .timeline-date {
+            display: inline-block;
+            padding: 0.2rem 0.75rem;
+            border-radius: 20px;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-blue);
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+        }
+
+        .timeline-role {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .timeline-company {
+            color: var(--accent-indigo);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .timeline-bullets {
+            list-style: disc;
+            padding-left: 1.2rem;
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-bullets li {
+            margin-bottom: 0.45rem;
+        }
+
+        .impact-box {
+            background: rgba(20, 184, 166, 0.08);
+            border-left: 3px solid var(--accent-teal);
+            padding: 0.8rem 1rem;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.88rem;
+            color: var(--text-primary);
+            margin-top: 1rem;
+        }
+
+        /* Filter Controls */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            gap: 0.65rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--accent-gradient);
+            color: #ffffff;
+            border-color: transparent;
+        }
+
+        /* Skills Dashboard */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: var(--accent-blue);
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
+            padding: 0.35rem 0.75rem;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .skill-tag:hover {
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+            background: rgba(56, 189, 248, 0.08);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.75rem;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .project-num {
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.4rem;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+        }
+
+        .project-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1.2rem;
+            flex-grow: 1;
+        }
+
+        /* Certifications & Awards */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .cert-card {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .cert-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .cert-name {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .cert-issuer {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+        }
+
+        .cert-id {
+            font-size: 0.72rem;
+            font-family: 'Fira Code', monospace;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .award-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .award-icon {
+            font-size: 1.4rem;
+            color: var(--accent-amber);
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 2.5rem;
+        }
+
+        .contact-info-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .contact-icon-box {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 0.4rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border-radius: 10px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.92rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 3px var(--accent-glow);
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* Floating UI Elements */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--accent-gradient);
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px var(--accent-glow);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #10b981;
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+            z-index: 2000;
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 2.5rem 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 992px) {
+            .hero-grid, .about-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-title { font-size: 2.75rem; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 76px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 76px);
+                background: var(--bg-secondary);
+                flex-direction: column;
+                justify-content: center;
+                transition: var(--transition);
+            }
+            .nav-links.active { left: 0; }
+            .mobile-toggle { display: block; }
+            .hero-title { font-size: 2.2rem; }
+            .info-list { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .projects-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fa-solid fa-check-circle"></i> Direct email copied to clipboard!
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="logo">
+                <span class="logo-badge">RD</span>
+                <span>Ragavan Durairaj</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#pocs" class="nav-link">GenAI Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#education" class="nav-link">Education & Awards</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-tag">
+                        <span class="pulse-dot"></span> SRE & Generative AI Innovation Lead
+                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Ragavan Durairaj</span>
+                    </h1>
+                    <div class="hero-subtitle">
+                        SRE and GenAI Innovation Lead | 7+ Years Enterprise Experience
+                    </div>
+                    <p class="hero-description">
+                        Innovation-driven leader specializing in Site Reliability Engineering, AI/ML innovation, and enterprise solution delivery. Skilled in LLMs, Agentic AI, RAG architectures, and intelligent automation to power scalable, high-availability platforms.
+                    </p>
+
+                    <div class="hero-cta">
+                        <!-- CV Download Link -->
+                        <a href="Ragavan_Durairaj_CV.pdf" download="Ragavan_Durairaj_CV.pdf" target="_blank" class="btn btn-primary">
+                            <i class="fa-solid fa-file-pdf"></i> Download CV (PDF)
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fa-solid fa-paper-plane"></i> Get In Touch
+                        </a>
+                        <button class="btn btn-outline" onclick="copyEmail()">
+                            <i class="fa-solid fa-copy"></i> Copy Email
+                        </button>
+                        <a href="https://www.linkedin.com/in/djragavnm/" target="_blank" class="btn btn-outline">
+                            <i class="fa-brands fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="glass-card profile-card">
+                        <div class="profile-avatar-wrapper">
+                            <div class="profile-avatar-inner">
+                                <i class="fa-solid fa-user-gear"></i>
+                            </div>
+                        </div>
+                        <h3 style="font-size: 1.25rem;">Ragavan Durairaj</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">TCS Lead SRE & GenAI Architect</p>
+                        <p style="color: var(--text-muted); font-size: 0.82rem; margin-top: 0.2rem;">
+                            <i class="fa-solid fa-location-dot"></i> Chennai, TN, India (603103)
+                        </p>
+
+                        <div class="tech-pill-grid">
+                            <span class="tech-pill"><i class="devicon-amazonwebservices-plain"></i> AWS Solutions Architect</span>
+                            <span class="tech-pill"><i class="devicon-azure-plain text-blue-400"></i> Azure OpenAI</span>
+                            <span class="tech-pill"><i class="fa-solid fa-brain"></i> Agentic AI</span>
+                            <span class="tech-pill"><i class="fa-solid fa-chart-line"></i> Dynatrace & Splunk</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="stats-grid">
+                <div class="glass-card stat-card">
+                    <div class="stat-number counter" data-target="7">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="glass-card stat-card">
+                    <div class="stat-number counter" data-target="99.9">0</div>
+                    <div class="stat-label">% System Availability</div>
+                </div>
+                <div class="glass-card stat-card">
+                    <div class="stat-number counter" data-target="9">0</div>
+                    <div class="stat-label">GenAI Enterprise POCs</div>
+                </div>
+                <div class="glass-card stat-card">
+                    <div class="stat-number counter" data-target="18">0</div>
+                    <div class="stat-label">+ Certifications & Badges</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Summary / About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Overview</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <p class="section-subtitle">Bridging Site Reliability Engineering with Enterprise Generative AI</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="glass-card space-y-4">
+                    <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;"><i class="fa-solid fa-user-astronaut text-blue-400"></i> Executive Summary</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.98rem; margin-bottom: 1rem;">
+                        I am a Technical Lead, Site Reliability Engineer (SRE), and Generative AI Innovation Lead at Tata Consultancy Services (TCS) with 7+ years of expertise in production support, incident management, cloud-native applications, and platform reliability.
+                    </p>
+                    <p style="color: var(--text-secondary); font-size: 0.98rem; margin-bottom: 1rem;">
+                        I bring extensive domain expertise in the <strong>Hospitality Industry</strong>, particularly in Central Reservation Systems (CRS), supporting mission-critical platforms and business operations.
+                    </p>
+                    <p style="color: var(--text-secondary); font-size: 0.98rem;">
+                        Alongside my SRE role, I lead enterprise Generative AI innovation, architecting solutions using Azure OpenAI, OpenAI, Vertex AI, LangChain, LangGraph, Model Context Protocol (MCP), and Agentic AI.
+                    </p>
+
+                    <ul class="info-list">
+                        <li class="info-item"><i class="fa-solid fa-envelope"></i> djragavanm@gmail.com</li>
+                        <li class="info-item"><i class="fa-solid fa-phone"></i> +91 8940871204</li>
+                        <li class="info-item"><i class="fa-solid fa-location-dot"></i> Chennai, TN, IN - 603103</li>
+                        <li class="info-item"><i class="fa-solid fa-cake-candles"></i> 25th December 1997</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div class="glass-card">
+                        <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--accent-blue); margin-bottom: 0.4rem;">
+                            <i class="fa-solid fa-shield-halved"></i> Information Security Leadership
+                        </h4>
+                        <p style="font-size: 0.88rem; color: var(--text-secondary);">
+                            Coordinated security incidents and drove awareness through training, boosting security compliance (2020-2024).
+                        </p>
+                    </div>
+
+                    <div class="glass-card">
+                        <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--accent-teal); margin-bottom: 0.4rem;">
+                            <i class="fa-solid fa-chalkboard-user"></i> Learning & Development
+                        </h4>
+                        <p style="font-size: 0.88rem; color: var(--text-secondary);">
+                            Led structured training and development programs to elevate team skillsets and technical capabilities.
+                        </p>
+                    </div>
+
+                    <div class="glass-card">
+                        <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--accent-purple); margin-bottom: 0.4rem;">
+                            <i class="fa-solid fa-file-powerpoint"></i> Project Proposal Expertise
+                        </h4>
+                        <p style="font-size: 0.88rem; color: var(--text-secondary);">
+                            Authored high-impact technical proposals in MS PowerPoint, contributing directly to client acquisition and project expansions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Timeline -->
+    <section id="experience" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Career Journey</span>
+                <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+                <p class="section-subtitle">7+ Years at Tata Consultancy Services (Client: Leading Hospitality Client in US)</p>
+            </div>
+
+            <div class="timeline">
+                
+                <!-- Role 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card">
+                        <span class="timeline-date">Jul 2025 - May 2026</span>
+                        <h3 class="timeline-role">Technical Lead - Application Development</h3>
+                        <div class="timeline-company">Tata Consultancy Services, Chennai</div>
+                        <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+                            Led the design, architecture, and delivery of a cloud-native Reservation Migration Platform for enterprise hospitality systems, driving end-to-end implementation from proposal through production deployment.
+                        </p>
+                        <ul class="timeline-bullets">
+                            <li>Designed AWS-based solution architecture & prepared complete technical proposal for client approval.</li>
+                            <li>Led client workshops, requirement gathering, and technical discussions throughout the project lifecycle.</li>
+                            <li>Collaborated with platform, security, infra, and networking teams for DNS, SSO, environments, APIs, and cloud services.</li>
+                            <li>Coordinated Agile sprint planning and successfully delivered all committed deliverables on schedule.</li>
+                            <li>Worked closely with dev, DevOps, QA, and business teams during deployment and production readiness.</li>
+                        </ul>
+                        <div class="impact-box">
+                            <strong>Key Achievements:</strong> Standardized automation improved partner onboarding timelines by <strong>40%</strong>; configurable mapping engines reduced manual migration effort by <strong>70%</strong>; achieved <strong>95%+</strong> data accuracy through automated validation & normalization; real-time monitoring dashboards cut issue detection/resolution time by <strong>50%</strong>.
+                        </div>
+                        <div style="display: flex; flex-wrap: gap; gap: 0.4rem; margin-top: 1rem;">
+                            <span class="tech-pill">AWS Microservices</span>
+                            <span class="tech-pill">SFTP Pipelines</span>
+                            <span class="tech-pill">SSO Integration</span>
+                            <span class="tech-pill">DNS</span>
+                            <span class="tech-pill">Agile Scrum</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Parallel Role 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot" style="background: var(--accent-purple);"></div>
+                    <div class="glass-card" style="border-left: 3px solid var(--accent-purple);">
+                        <span class="timeline-date" style="background: rgba(168, 85, 247, 0.15); color: var(--accent-purple);">Jun 2023 - Present (Parallel Role)</span>
+                        <h3 class="timeline-role">Generative AI Innovation Lead</h3>
+                        <div class="timeline-company">Tata Consultancy Services, Chennai</div>
+                        <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+                            Leading enterprise Generative AI initiatives alongside SRE responsibilities by designing secure, scalable AI platforms and intelligent automation solutions for hospitality operations.
+                        </p>
+                        <ul class="timeline-bullets">
+                            <li>Designed and delivered enterprise GenAI solutions using Azure OpenAI, OpenAI, and Agentic AI frameworks.</li>
+                            <li>Built RAG applications, AI assistants, synthetic data generation platforms, and AI automation solutions.</li>
+                            <li>Developed reusable AI accelerators, frameworks, and enterprise integration patterns.</li>
+                            <li>Led technical architecture, client demonstrations, solution reviews, and innovation workshops.</li>
+                            <li>Ensured AI platform reliability through monitoring, incident management, observability, and operational excellence.</li>
+                        </ul>
+                        <div style="display: flex; flex-wrap: gap; gap: 0.4rem; margin-top: 1rem;">
+                            <span class="tech-pill">Azure OpenAI</span>
+                            <span class="tech-pill">Agentic AI</span>
+                            <span class="tech-pill">RAG</span>
+                            <span class="tech-pill">MCP</span>
+                            <span class="tech-pill">LangChain</span>
+                            <span class="tech-pill">LangGraph</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card">
+                        <span class="timeline-date">Apr 2022 - Jun 2025</span>
+                        <h3 class="timeline-role">Techno-Functional Lead (Incident Management)</h3>
+                        <div class="timeline-company">Tata Consultancy Services, Chennai</div>
+                        <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+                            Led production support operations for enterprise reservation platforms while managing high-priority incidents, driving observability improvements, automation initiatives, and cross-functional technical leadership.
+                        </p>
+                        <ul class="timeline-bullets">
+                            <li>Led bridge calls for Severity 1 & Severity 2 production incidents involving multiple technology teams.</li>
+                            <li>Managed end-to-end incident lifecycle: triage, communication, restoration, RCA, and preventive actions.</li>
+                            <li>Collaborated with Revenue Management, Sales, Data, Infra, Dev, and Business teams.</li>
+                            <li>Improved observability using Splunk & Dynatrace dashboards; built operational Power BI dashboards.</li>
+                            <li>Automated incident notification workflows using Microsoft Power Automate.</li>
+                        </ul>
+                        <div class="impact-box">
+                            <strong>Key Achievements:</strong> Delivered <strong>99.9%</strong> application availability via proactive SRE monitoring; reduced MTTR by <strong>40%</strong> through Dynatrace & Splunk observability; reduced L3 escalations by <strong>50%</strong> via deeper L2 troubleshooting & RCA; automated critical notifications to cut MITA.
+                        </div>
+                        <div style="display: flex; flex-wrap: gap; gap: 0.4rem; margin-top: 1rem;">
+                            <span class="tech-pill">Dynatrace</span>
+                            <span class="tech-pill">Splunk</span>
+                            <span class="tech-pill">Power BI</span>
+                            <span class="tech-pill">Power Automate</span>
+                            <span class="tech-pill">RCA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card">
+                        <span class="timeline-date">Jul 2019 - Mar 2022</span>
+                        <h3 class="timeline-role">Incident Management Specialist</h3>
+                        <div class="timeline-company">Tata Consultancy Services, Chennai</div>
+                        <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+                            Provided Level-2 production support for enterprise reservation platforms, ensuring high system availability through rapid incident response and cross-functional collaboration.
+                        </p>
+                        <ul class="timeline-bullets">
+                            <li>Managed high-priority production incidents affecting reservation systems under strict SLAs.</li>
+                            <li>Performed deep application troubleshooting, log analysis, and root cause identification.</li>
+                            <li>Documented incident resolutions, SOPs, and knowledge articles to train incoming engineers.</li>
+                        </ul>
+                        <div class="impact-box">
+                            <strong>Key Achievements:</strong> Achieved <strong>100% SLA compliance</strong> for incident resolution and service restoration across multi-year tenure.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical & Leadership Skills Dashboard -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Skill Matrix</span>
+                <h2 class="section-title">Technical & Leadership <span class="gradient-text">Skills</span></h2>
+                <p class="section-subtitle">Interactive breakdown of toolsets, architecture capabilities, and domain mastery</p>
+            </div>
+
+            <div class="filter-container">
+                <button class="filter-btn active" onclick="filterSkills('all')">All Skills</button>
+                <button class="filter-btn" onclick="filterSkills('genai')">GenAI & AI/ML</button>
+                <button class="filter-btn" onclick="filterSkills('sre')">SRE & Observability</button>
+                <button class="filter-btn" onclick="filterSkills('cloud')">Cloud & Platform</button>
+                <button class="filter-btn" onclick="filterSkills('prog')">Programming & Tools</button>
+                <button class="filter-btn" onclick="filterSkills('lead')">Leadership & Domain</button>
+            </div>
+
+            <div class="skills-grid" id="skillsGrid">
+                
+                <!-- GenAI -->
+                <div class="glass-card skill-card-item" data-category="genai">
+                    <div class="skill-category-title">
+                        <i class="fa-solid fa-brain"></i>
+                        <span>Generative AI & AI/ML</span>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="devicon-azure-plain text-blue-400"></i> LLMs (GPT-4/4o, Azure OpenAI)</span>
+                        <span class="skill-tag"><i class="fa-solid fa-robot"></i> Agentic AI</span>
+                        <span class="skill-tag"><i class="fa-solid fa-database"></i> RAG Architectures</span>
+                        <span class="skill-tag"><i class="fa-solid fa-network-wired"></i> Model Context Protocol (MCP)</span>
+                        <span class="skill-tag"><i class="fa-solid fa-link"></i> LangChain & LangGraph</span>
+                        <span class="skill-tag"><i class="fa-solid fa-terminal"></i> Prompt Engineering</span>
+                    </div>
+                </div>
+
+                <!-- AI Productivity Tools -->
+                <div class="glass-card skill-card-item" data-category="genai">
+                    <div class="skill-category-title">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <span>AI Enterprise Productivity Tools</span>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fa-brands fa-microsoft"></i> Microsoft Copilot</span>
+                        <span class="skill-tag"><i class="fa-brands fa-google"></i> Google Gemini</span>
+                        <span class="skill-tag"><i class="fa-solid fa-sparkles"></i> Claude AI</span>
+                        <span class="skill-tag"><i class="fa-solid fa-code"></i> Cursor AI</span>
+                        <span class="skill-tag"><i class="fa-solid fa-cubes"></i> Atlassian Rovo AI</span>
+                        <span class="skill-tag"><i class="fa-solid fa-paw"></i> BigPanda Biggy AI</span>
+                    </div>
+                </div>
+
+                <!-- SRE -->
+                <div class="glass-card skill-card-item" data-category="sre">
+                    <div class="skill-category-title">
+                        <i class="fa-solid fa-server"></i>
+                        <span>Site Reliability (SRE)</span>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fa-solid fa-triangle-exclamation"></i> Incident Management (Sev1/Sev2)</span>
+                        <span class="skill-tag"><i class="fa-solid fa-magnifying-glass"></i> Problem Mgmt & RCA</span>
+                        <span class="skill-tag"><i class="fa-solid fa-rotate-left"></i> Service Restoration</span>
+                        <span class="skill-tag"><i class="fa-solid fa-gauge-high"></i> SLA/SLO Monitoring</span>
+                        <span class="skill-tag"><i class="fa-solid fa-headset"></i> Production Support</span>
+                        <span class="skill-tag"><i class="fa-solid fa-code-branch"></i> Change & Release</span>
+                    </div>
+                </div>
+
+                <!-- Observability -->
+                <div class="glass-card skill-card-item" data-category="sre">
+                    <div class="skill-category-title">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Observability & Monitoring</span>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fa-solid fa-desktop"></i> Dynatrace</span>
+                        <span class="skill-tag"><i class="fa-solid fa-magnifying-glass-chart"></i> Splunk</span>
+                        <span class="skill-tag"><i class="fa-solid fa-cube"></i> GlassBox</span>
+                        <span class="skill-tag"><i class="fa-solid fa-chart-pie"></i> Dashboard Development</span>
+                        <span class="skill-tag"><i class="fa-solid fa-file-lines"></i> Log Analysis</span>
+                        <span class="skill-tag"><i class="fa-solid fa-heart-pulse"></i> Production Health</span>
+                    </div>
+                </div>
+
+                <!-- Cloud & Platform -->
+                <div class="glass-card skill-card-item" data-category="cloud">
+                    <div class="skill-category-title">
+                        <i class="fa-solid fa-cloud"></i>
+                        <span>Cloud, Platform & DevOps</span>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="devicon-amazonwebservices-original"></i> AWS Services</span>
+                        <span class="skill-tag"><i class="devicon-kubernetes-plain"></i> Kubernetes</span>
+                        <span class="skill-tag"><i class="devicon-docker-plain"></i> Docker</span>
+                        <span class="skill-tag"><i class="fa-solid fa-gears"></i> Harness CI/CD</span>
+                        <span class="skill-tag"><i class="devicon-couchbase-plain"></i> Couchbase / Capella</span>
+                        <span class="skill-tag"><i class="devicon-mongodb-plain"></i> Amazon DocumentDB</span>
+                    </div>
+                </div>
+
+                <!-- Languages & Automation -->
+                <div class="glass-card skill-card-item" data-category="prog">
+                    <div class="skill-category-title">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Languages & Automation</span>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="devicon-python-plain"></i> Python</span>
+                        <span class="skill-tag"><i class="devicon-spring-plain"></i> Java Spring</span>
+                        <span class="skill-tag"><i class="devicon-mysql-plain"></i> SQL, DAX, DQL, DPL</span>
+                        <span class="skill-tag"><i class="fa-solid fa-bolt"></i> Power Automate</span>
+                        <span class="skill-tag"><i class="fa-solid fa-chart-bar"></i> Power BI</span>
+                        <span class="skill-tag"><i class="fa-solid fa-plug"></i> APIs & Apache Kafka</span>
+                    </div>
+                </div>
+
+                <!-- Leadership & Domain -->
+                <div class="glass-card skill-card-item" data-category="lead">
+                    <div class="skill-category-title">
+                        <i class="fa-solid fa-users-gear"></i>
+                        <span>Leadership & Domain</span>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fa-solid fa-diagram-project"></i> Solution Architecture</span>
+                        <span class="skill-tag"><i class="fa-solid fa-handshake"></i> Client Engagement</span>
+                        <span class="skill-tag"><i class="fa-solid fa-hotel"></i> Hospitality Domain (CRS)</span>
+                        <span class="skill-tag"><i class="fa-solid fa-comments-dollar"></i> Revenue Management</span>
+                        <span class="skill-tag"><i class="fa-solid fa-chalkboard-user"></i> Mentoring & Agile</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GenAI Proof of Concepts (POCs) Section -->
+    <section id="pocs" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Innovation Showcase</span>
+                <h2 class="section-title">GenAI <span class="gradient-text">Proof of Concepts (POCs)</span></h2>
+                <p class="section-subtitle">Real-World Enterprise AI Solutions Architected and Built</p>
+            </div>
+
+            <div class="projects-grid">
+                
+                <!-- POC 1 -->
+                <div class="glass-card project-card">
+                    <div>
+                        <div class="project-num">POC 1</div>
+                        <h3 class="project-title">Pricing Application Chatbot</h3>
+                        <p class="project-desc">Built RAG knowledge base using pricing documentation and FAQs. Automated extraction, summarization, and structuring of pricing knowledge for conversational self-service support.</p>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 0.75rem;">
+                        <span class="tech-pill">Azure OpenAI</span>
+                        <span class="tech-pill">LangChain</span>
+                        <span class="tech-pill">RAG</span>
+                        <span class="tech-pill">Vector DB</span>
+                    </div>
+                </div>
+
+                <!-- POC 2 -->
+                <div class="glass-card project-card">
+                    <div>
+                        <div class="project-num">POC 2</div>
+                        <h3 class="project-title">GenAI Test Case Scenario Generator</h3>
+                        <p class="project-desc">LLM-powered solution to automatically generate comprehensive functional test scenarios based on key reservation parameters and business rules, reducing manual test design.</p>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 0.75rem;">
+                        <span class="tech-pill">Azure OpenAI</span>
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">LLMs</span>
+                        <span class="tech-pill">QA Automation</span>
+                    </div>
+                </div>
+
+                <!-- POC 3 -->
+                <div class="glass-card project-card">
+                    <div>
+                        <div class="project-num">POC 3</div>
+                        <h3 class="project-title">Synthetic Test Data Generation (TOSCA)</h3>
+                        <p class="project-desc">Generated realistic synthetic reservation test data and integrated with TOSCA automation framework to accelerate automated QA testing and eliminate data prep bottlenecks.</p>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 0.75rem;">
+                        <span class="tech-pill">Azure OpenAI</span>
+                        <span class="tech-pill">TOSCA</span>
+                        <span class="tech-pill">Python</span>
+                    </div>
+                </div>
+
+                <!-- POC 4 -->
+                <div class="glass-card project-card">
+                    <div>
+                        <div class="project-num">POC 4</div>
+                        <h3 class="project-title">KT Video to Tech Doc Generator</h3>
+                        <p class="project-desc">Converts Knowledge Transfer videos into structured technical docs using Whisper transcription, OCR for slide capture, and RAG semantic search for engineer onboarding.</p>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 0.75rem;">
+                        <span class="tech-pill">Whisper</span>
+                        <span class="tech-pill">OCR</span>
+                        <span class="tech-pill">LangChain</span>
+                        <span class="tech-pill">RAG</span>
+                    </div>
+                </div>
+
+                <!-- POC 5 -->
+                <div class="glass-card project-card">
+                    <div>
+                        <div class="project-num">POC 5</div>
+                        <h3 class="project-title">Code Documentation & AI Assistant</h3>
+                        <p class="project-desc">Generates technical docs from source code and enables interactive contextual AI chat for developers across multiple repositories to improve codebase maintainability.</p>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 0.75rem;">
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">Azure OpenAI</span>
+                        <span class="tech-pill">LangChain</span>
+                        <span class="tech-pill">Vector DB</span>
+                    </div>
+                </div>
+
+                <!-- POC 6 -->
+                <div class="glass-card project-card">
+                    <div>
+                        <div class="project-num">POC 6</div>
+                        <h3 class="project-title">GenAI EDA Analytics Platform</h3>
+                        <p class="project-desc">Automated data profiling, visualization, statistical analysis, anomaly detection, and natural language query reporting built using Streamlit, Pandas, and Plotly.</p>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 0.75rem;">
+                        <span class="tech-pill">Streamlit</span>
+                        <span class="tech-pill">Pandas</span>
+                        <span class="tech-pill">Plotly</span>
+                        <span class="tech-pill">OpenAI</span>
+                    </div>
+                </div>
+
+                <!-- POC 7 -->
+                <div class="glass-card project-card">
+                    <div>
+                        <div class="project-num">POC 7</div>
+                        <h3 class="project-title">Group Sales Booking Assistant</h3>
+                        <p class="project-desc">Parses group booking emails, auto-identifies missing details, sends contextual follow-ups, and converts finalized booking data into JSON payloads for reservation APIs.</p>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 0.75rem;">
+                        <span class="tech-pill">REST APIs</span>
+                        <span class="tech-pill">Email Automation</span>
+                        <span class="tech-pill">LangChain</span>
+                        <span class="tech-pill">JSON</span>
+                    </div>
+                </div>
+
+                <!-- POC 8 -->
+                <div class="glass-card project-card">
+                    <div>
+                        <div class="project-num">POC 8</div>
+                        <h3 class="project-title">Alexa Hotel Food Ordering Voice Skill</h3>
+                        <p class="project-desc">Voice-enabled food ordering assistant using Alexa Skills Kit and AWS Lambda connected to hotel restaurant management systems via secure APIs.</p>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 0.75rem;">
+                        <span class="tech-pill">Alexa ASK</span>
+                        <span class="tech-pill">AWS Lambda</span>
+                        <span class="tech-pill">Python</span>
+                    </div>
+                </div>
+
+                <!-- POC 9 -->
+                <div class="glass-card project-card">
+                    <div>
+                        <div class="project-num">POC 9</div>
+                        <h3 class="project-title">AI Test Step Generation Copilot</h3>
+                        <p class="project-desc">Generates detailed test steps from high-level summaries using historical certified test cases via RAG, auto-classifying functionalities (Create, Modify, Delete, Search).</p>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 0.75rem;">
+                        <span class="tech-pill">Azure OpenAI</span>
+                        <span class="tech-pill">RAG</span>
+                        <span class="tech-pill">LangChain</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Credentials</span>
+                <h2 class="section-title">Professional <span class="gradient-text">Certifications</span></h2>
+                <p class="section-subtitle">Global Industry Credentials & Internal TCS Qualifications</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem;">
+                <!-- External Global Certs -->
+                <div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.25rem;" class="flex items-center gap-2">
+                        <i class="fa-solid fa-certificate text-blue-400"></i> Global & Industry Certifications
+                    </h3>
+                    <div class="space-y-3" style="display: flex; flex-direction: column; gap: 0.8rem;">
+                        <div class="glass-card cert-card">
+                            <div class="cert-icon"><i class="devicon-amazonwebservices-plain"></i></div>
+                            <div>
+                                <div class="cert-name">AWS Certified Solutions Architect – Associate</div>
+                                <div class="cert-issuer">Jun 2025 - Jun 2028</div>
+                                <div class="cert-id">AWS-7d71d744f3ef4837ad1be817f00ee860</div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card cert-card">
+                            <div class="cert-icon"><i class="devicon-amazonwebservices-plain"></i></div>
+                            <div>
+                                <div class="cert-name">AWS Certified AI Practitioner</div>
+                                <div class="cert-issuer">Feb 2025 - Feb 2028</div>
+                                <div class="cert-id">AWS-2dec7f3f3fb2474e87e0d32cfc15e85a</div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card cert-card">
+                            <div class="cert-icon"><i class="fa-solid fa-chart-bar text-blue-400"></i></div>
+                            <div>
+                                <div class="cert-name">Tableau Desktop Specialist</div>
+                                <div class="cert-issuer">Mar 2024</div>
+                                <div class="cert-id">Tableau - T000141370</div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card cert-card">
+                            <div class="cert-icon"><i class="devicon-python-plain text-yellow-400"></i></div>
+                            <div>
+                                <div class="cert-name">Python for Data Science Professional</div>
+                                <div class="cert-issuer">Edureka | Jan 2024</div>
+                                <div class="cert-id">Edureka - KNH97F982</div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card cert-card">
+                            <div class="cert-icon"><i class="devicon-python-plain text-yellow-400"></i></div>
+                            <div>
+                                <div class="cert-name">Certified Entry-Level Python Programmer</div>
+                                <div class="cert-issuer">Python Institute | Nov 2023</div>
+                                <div class="cert-id">nQ7X.34wN.09eK</div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card cert-card">
+                            <div class="cert-icon"><i class="devicon-azure-plain text-blue-500"></i></div>
+                            <div>
+                                <div class="cert-name">Microsoft Certified: Azure Fundamentals</div>
+                                <div class="cert-issuer">Microsoft | May 2021</div>
+                                <div class="cert-id">H780-1500</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internal TCS Certs -->
+                <div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.25rem;">
+                        <i class="fa-solid fa-award text-purple-400"></i> TCS Internal Competency Certifications
+                    </h3>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;">
+                        <div class="glass-card" style="padding: 1rem;">
+                            <div style="font-weight: 700; font-size: 0.88rem;">Software Security Awareness for Managers</div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">Module 1 & 2 | Nov 2025</div>
+                        </div>
+                        <div class="glass-card" style="padding: 1rem;">
+                            <div style="font-weight: 700; font-size: 0.88rem;">GenAI: AWS Generative AI Series</div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">Jul 2025</div>
+                        </div>
+                        <div class="glass-card" style="padding: 1rem;">
+                            <div style="font-weight: 700; font-size: 0.88rem;">AI Experience Zone for Google Intermediate</div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">Dec 2024</div>
+                        </div>
+                        <div class="glass-card" style="padding: 1rem;">
+                            <div style="font-weight: 700; font-size: 0.88rem;">Solution Xpert AIML E2 Stream 2</div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">Aug 2024</div>
+                        </div>
+                        <div class="glass-card" style="padding: 1rem;">
+                            <div style="font-weight: 700; font-size: 0.88rem;">Digital: Python for Data Science</div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">Dec 2023</div>
+                        </div>
+                        <div class="glass-card" style="padding: 1rem;">
+                            <div style="font-weight: 700; font-size: 0.88rem;">Digital: Natural Language Processing</div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">Dec 2023</div>
+                        </div>
+                        <div class="glass-card" style="padding: 1rem;">
+                            <div style="font-weight: 700; font-size: 0.88rem;">Foundation Generative AI Curriculum</div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">Oct / Dec 2023</div>
+                        </div>
+                        <div class="glass-card" style="padding: 1rem;">
+                            <div style="font-weight: 700; font-size: 0.88rem;">Leadership: Managing Secure Delivery & Ops</div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">Oct 2023</div>
+                        </div>
+                        <div class="glass-card" style="padding: 1rem;">
+                            <div style="font-weight: 700; font-size: 0.88rem;">Business English Certification</div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">Sep 2022</div>
+                        </div>
+                        <div class="glass-card" style="padding: 1rem;">
+                            <div style="font-weight: 700; font-size: 0.88rem;">ITIL Foundation Certification</div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">Sep 2019</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education, Awards & Personal Details -->
+    <section id="education" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+                
+                <!-- Education -->
+                <div>
+                    <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 1.25rem;"><i class="fa-solid fa-graduation-cap text-blue-400"></i> Education</h3>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div class="glass-card">
+                            <span class="timeline-date">May 2021 – June 2023</span>
+                            <h4 style="font-size: 1.05rem;">MBA - Technology Management</h4>
+                            <p style="color: var(--accent-blue); font-size: 0.88rem;">Anna University, Chennai (Distance Education)</p>
+                        </div>
+                        <div class="glass-card">
+                            <span class="timeline-date">July 2015 – April 2019</span>
+                            <h4 style="font-size: 1.05rem;">B.E. - Electrical & Electronics Engineering</h4>
+                            <p style="color: var(--accent-blue); font-size: 0.88rem;">K Ramakrishnan College of Technology, Trichy</p>
+                            <ul style="padding-left: 1.2rem; color: var(--text-secondary); font-size: 0.82rem; margin-top: 0.5rem; list-style: disc;">
+                                <li>Secretary of Muththamizh Mandram</li>
+                                <li>Vice Chairman of IEEE Students Chapter</li>
+                                <li>Head of Compering Club</li>
+                                <li>Coordinator for College Symposiums & Workshops</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Awards & Recognition -->
+                <div>
+                    <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 1.25rem;"><i class="fa-solid fa-trophy text-amber-400"></i> Honors & Awards</h3>
+                    <div class="glass-card" style="max-height: 380px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.85rem;">
+                        <div style="padding-bottom: 0.4rem; border-bottom: 1px solid var(--border-color);">
+                            <strong>Special Initiative Award:</strong> Jan 2022, Jan 2025, Aug 2025, Dec 2025, Jul 2026 (TCS)
+                        </div>
+                        <div style="padding-bottom: 0.4rem; border-bottom: 1px solid var(--border-color);">
+                            <strong>Star of the Quarter Award:</strong> Apr 2025, Nov 2025 (TCS)
+                        </div>
+                        <div style="padding-bottom: 0.4rem; border-bottom: 1px solid var(--border-color);">
+                            <strong>On The Spot Award:</strong> Nov 2022, Jan 2021, Jan 2025 (TCS)
+                        </div>
+                        <div style="padding-bottom: 0.4rem; border-bottom: 1px solid var(--border-color);">
+                            <strong>Best Team Award:</strong> Jun 2025 (TCS)
+                        </div>
+                        <div style="padding-bottom: 0.4rem; border-bottom: 1px solid var(--border-color);">
+                            <strong>Star Performer of TTH Americas Unit:</strong> Oct 2024 (TCS)
+                        </div>
+                        <div style="padding-bottom: 0.4rem; border-bottom: 1px solid var(--border-color);">
+                            <strong>Service & Commitment Award:</strong> Jul 2024 (TCS)
+                        </div>
+                        <div style="padding-bottom: 0.4rem; border-bottom: 1px solid var(--border-color);">
+                            <strong>Beyond Excellence Award:</strong> Aug 2023 (TCS Customer)
+                        </div>
+                        <div style="padding-bottom: 0.4rem; border-bottom: 1px solid var(--border-color);">
+                            <strong>Technical Excellence Award:</strong> Apr 2023 (TCS Customer)
+                        </div>
+                        <div style="padding-bottom: 0.4rem; border-bottom: 1px solid var(--border-color);">
+                            <strong>Gold & Silver Certificate:</strong> Corporate Maitree (2021, 2022)
+                        </div>
+                        <div>
+                            <strong>Alumni Service Award:</strong> Mar 2024, Apr 2025 (KRCT)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Languages & Hobbies -->
+                <div>
+                    <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 1.25rem;"><i class="fa-solid fa-user-check text-teal-400"></i> Personal Info</h3>
+                    <div class="glass-card space-y-4" style="font-size: 0.9rem;">
+                        <div>
+                            <span style="color: var(--text-muted); font-size: 0.8rem; display: block;">Date of Birth:</span>
+                            <strong>25th December 1997</strong>
+                        </div>
+                        <div style="margin-top: 0.75rem;">
+                            <span style="color: var(--text-muted); font-size: 0.8rem; display: block; margin-bottom: 0.3rem;">Languages Known:</span>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <span class="tech-pill" style="color: var(--accent-teal);">Tamil (L/R/W/S)</span>
+                                <span class="tech-pill" style="color: var(--accent-teal);">English (L/R/W/S)</span>
+                            </div>
+                        </div>
+                        <div style="margin-top: 0.75rem;">
+                            <span style="color: var(--text-muted); font-size: 0.8rem; display: block; margin-bottom: 0.3rem;">Hobbies:</span>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <span class="tech-pill"><i class="fa-solid fa-book"></i> Reading Books</span>
+                                <span class="tech-pill"><i class="fa-solid fa-utensils"></i> Cooking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Get In Touch</span>
+                <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+                <p class="section-subtitle">Open to discussions on SRE leadership, Generative AI architecture, or technology partnerships.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div>
+                    <div class="glass-card contact-info-card">
+                        <div class="contact-icon-box"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <div style="font-size: 0.78rem; color: var(--text-muted);">EMAIL</div>
+                            <a href="mailto:djragavanm@gmail.com" style="font-weight: 700;">djragavanm@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card contact-info-card">
+                        <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <div style="font-size: 0.78rem; color: var(--text-muted);">PHONE</div>
+                            <a href="tel:+918940871204" style="font-weight: 700;">+91 8940871204</a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card contact-info-card">
+                        <div class="contact-icon-box"><i class="fa-brands fa-linkedin-in"></i></div>
+                        <div>
+                            <div style="font-size: 0.78rem; color: var(--text-muted);">LINKEDIN</div>
+                            <a href="https://www.linkedin.com/in/djragavnm/" target="_blank" style="font-weight: 700;">linkedin.com/in/djragavnm</a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card contact-info-card">
+                        <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <div style="font-size: 0.78rem; color: var(--text-muted);">LOCATION</div>
+                            <div style="font-weight: 700;">Chennai, TN, IN - 603103</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Integrated Contact Form Connected to Formspree -->
+                <div class="glass-card">
+                    <form action="https://formspree.io/f/djragavanm@gmail.com" method="POST" id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Your Name</label>
+                            <input type="text" name="name" id="name" required placeholder="John Doe" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Your Email</label>
+                            <input type="email" name="email" id="email" required placeholder="john@example.com" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea name="message" id="message" rows="4" required placeholder="How can we collaborate?" class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© Ragavan Durairaj. SRE & GenAI Innovation Leader.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Back to Top Button -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Theme Switcher Logic
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const themeIcon = themeToggleBtn.querySelector('i');
+        const htmlElement = document.documentElement;
+
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            htmlElement.setAttribute('data-theme', newTheme);
+            themeIcon.className = newTheme === 'dark' ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+        });
+
+        // Mobile Menu Toggle
+        const mobileToggleBtn = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileToggleBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('active'));
+        });
+
+        // Copy Email Toast Helper
+        function copyEmail() {
+            navigator.clipboard.writeText('djragavanm@gmail.com').then(() => {
+                const toast = document.getElementById('toast');
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3000);
+            });
+        }
+
+        // Skill Filter Logic
+        function filterSkills(category) {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const skillCards = document.querySelectorAll('.skill-card-item');
+            skillCards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Back to Top Visibility
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Animated Number Counters
+        const counters = document.querySelectorAll('.counter');
+        let animated = false;
+
+        window.addEventListener('scroll', () => {
+            const heroSection = document.getElementById('hero');
+            const position = heroSection.getBoundingClientRect();
+
+            if (position.top < window.innerHeight && !animated) {
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    const isFloat = target % 1 !== 0;
+                    let count = 0;
+                    const speed = target / 50;
+
+                    const updateCount = () => {
+                        count += speed;
+                        if (count < target) {
+                            counter.innerText = isFloat ? count.toFixed(1) : Math.ceil(count);
+                            setTimeout(updateCount, 30);
+                        } else {
+                            counter.innerText = target + (isFloat ? '%' : '');
+                        }
+                    };
+                    updateCount();
+                });
+                animated = true;
+            }
+        });
+    </script>
+</body>
+</html>
