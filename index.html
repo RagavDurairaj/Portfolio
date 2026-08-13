@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ragavan Durairaj — SRE &amp; GenAI Innovation Lead</title>
+<meta name="description" content="Ragavan Durairaj — Site Reliability Engineer and Generative AI Innovation Lead. 7+ years building reliable, intelligent enterprise systems.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ambient canvas background -->
+<canvas id="bg-canvas"></canvas>
+<div class="grain"></div>
+
+<!-- progress bar -->
+<div class="scroll-progress"><div class="scroll-progress__bar" id="scrollBar"></div></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__brand">
+      <span class="nav__dot" aria-hidden="true"></span>
+      <span class="nav__brand-text">RD<span class="nav__brand-blink">_</span></span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about" data-nav>about</a>
+      <a href="#experience" data-nav>experience</a>
+      <a href="#genai" data-nav>genai&nbsp;lab</a>
+      <a href="#skills" data-nav>stack</a>
+      <a href="#certifications" data-nav>certs</a>
+      <a href="#awards" data-nav>awards</a>
+      <a href="#contact" data-nav>contact</a>
+    </nav>
+    <div class="nav__status">
+      <span class="pulse-dot"></span> <span>status: available</span>
+    </div>
+    <button class="nav__burger" id="navBurger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO / SYSTEM STATUS PANEL ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__grid-lines" aria-hidden="true"></div>
+    <div class="hero__inner">
+
+      <div class="hero__left">
+        <div class="eyebrow"><span class="eyebrow__bracket">[</span> production status <span class="eyebrow__bracket">]</span></div>
+
+        <h1 class="hero__title">
+          <span class="hero__line hero__line--1">Ragavan</span>
+          <span class="hero__line hero__line--2">Durairaj</span>
+        </h1>
+
+        <p class="hero__role">
+          <span class="hero__role-typed" id="roleTyped"></span><span class="hero__cursor">|</span>
+        </p>
+
+        <p class="hero__desc">
+          Innovation-driven SRE and Generative AI leader keeping mission-critical hospitality reservation platforms up — and teaching them to think. 7+ years turning incidents into uptime and LLMs into production systems.
+        </p>
+
+        <div class="hero__cta">
+          <a href="mailto:djragavanm@gmail.com" class="btn btn--primary">
+            <span>Email me</span>
+          </a>
+          <a href="https://www.linkedin.com/in/djragavnm/" target="_blank" rel="noopener" class="btn btn--ghost">
+            <span>LinkedIn ↗</span>
+          </a>
+        </div>
+
+        <div class="hero__meta">
+          <span>Chennai, TN, IN</span>
+          <span class="hero__meta-sep">·</span>
+          <span>+91 89408 71204</span>
+        </div>
+      </div>
+
+      <div class="hero__right">
+        <div class="panel status-panel" id="statusPanel">
+          <div class="status-panel__bar">
+            <div class="status-panel__dots"><span></span><span></span><span></span></div>
+            <div class="status-panel__title">sre-genai-monitor — zsh</div>
+          </div>
+          <div class="status-panel__body">
+            <div class="boot-log" id="bootLog"></div>
+
+            <div class="status-panel__metrics" id="metricsGrid">
+              <div class="metric">
+                <div class="metric__value" data-target="99.9" data-suffix="%">0%</div>
+                <div class="metric__label">application availability</div>
+              </div>
+              <div class="metric">
+                <div class="metric__value" data-target="40" data-suffix="%">0%</div>
+                <div class="metric__label">MTTR reduction</div>
+              </div>
+              <div class="metric">
+                <div class="metric__value" data-target="70" data-suffix="%">0%</div>
+                <div class="metric__label">manual effort cut</div>
+              </div>
+              <div class="metric">
+                <div class="metric__value" data-target="7" data-suffix="+">0+</div>
+                <div class="metric__label">years in production</div>
+              </div>
+            </div>
+
+            <div class="uptime-graph" aria-hidden="true">
+              <svg viewBox="0 0 400 90" preserveAspectRatio="none" id="uptimeSvg">
+                <defs>
+                  <linearGradient id="uptimeFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#00e5a0" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="#00e5a0" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <polygon id="uptimeArea" points="" fill="url(#uptimeFill)"></polygon>
+                <polyline id="uptimeLine" points="" fill="none" stroke="#00e5a0" stroke-width="1.6"></polyline>
+              </svg>
+              <div class="uptime-graph__label">
+                <span>REAL-TIME OBSERVABILITY</span>
+                <span class="uptime-graph__ok"><span class="pulse-dot pulse-dot--sm"></span> all systems nominal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <a href="#about" class="hero__scroll" aria-label="Scroll to content">
+      <span>scroll</span>
+      <span class="hero__scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="section__inner">
+      <div class="section__head reveal">
+        <span class="section__num">01</span>
+        <h2 class="section__title">Summary</h2>
+      </div>
+      <div class="about__grid">
+        <p class="about__text reveal">
+          I'm a Technical Lead, Site Reliability Engineer, and Generative AI Innovation Lead at
+          Tata Consultancy Services, working inside the hospitality industry's most unforgiving
+          environment: Central Reservation Systems, where downtime is measured in lost bookings.
+          Seven-plus years in, I split my time between keeping platforms at 99.9% availability
+          and building the LLM, RAG, MCP, and agentic AI systems that will make the next
+          generation of that work unnecessary.
+        </p>
+        <div class="about__facts reveal">
+          <div class="fact"><span class="fact__label">Currently</span><span class="fact__value">Technical Lead · TCS, Chennai</span></div>
+          <div class="fact"><span class="fact__label">Domain</span><span class="fact__value">Hospitality · Central Reservation Systems</span></div>
+          <div class="fact"><span class="fact__label">Core discipline</span><span class="fact__value">SRE · Incident Management · Observability</span></div>
+          <div class="fact"><span class="fact__label">Parallel track</span><span class="fact__value">Generative AI · Agentic AI · RAG</span></div>
+          <div class="fact"><span class="fact__label">Education</span><span class="fact__value">MBA (Tech Mgmt) · B.E. Electrical &amp; Electronics</span></div>
+          <div class="fact"><span class="fact__label">Languages</span><span class="fact__value">Tamil · English</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE (INCIDENT LOG TIMELINE) ============ -->
+  <section class="section section--alt" id="experience">
+    <div class="section__inner">
+      <div class="section__head reveal">
+        <span class="section__num">02</span>
+        <h2 class="section__title">Experience Log</h2>
+        <p class="section__sub">read top to bottom — most recent entry first, like any good incident log</p>
+      </div>
+
+      <div class="timeline" id="timeline">
+        <!-- items injected by JS-friendly static markup below -->
+
+        <article class="tl-item reveal" data-severity="lead">
+          <div class="tl-item__rail">
+            <span class="tl-item__dot"></span>
+          </div>
+          <div class="tl-item__content panel">
+            <div class="tl-item__top">
+              <span class="tl-tag tl-tag--lead">TECHNICAL LEAD</span>
+              <span class="tl-item__date">Jul 2025 — May 2026</span>
+            </div>
+            <h3 class="tl-item__role">Technical Lead – Application Development</h3>
+            <p class="tl-item__org">Tata Consultancy Services · Chennai</p>
+            <p class="tl-item__desc">
+              Led design, architecture, and delivery of a cloud-native Reservation Migration
+              Platform for enterprise hospitality systems — from technical proposal through
+              production deployment.
+            </p>
+            <ul class="tl-item__list">
+              <li>Designed the AWS-based solution architecture and owned the technical proposal end to end</li>
+              <li>Automated reservation migration via secure SFTP ingestion, cloud pipelines, and business-rule validation</li>
+              <li>Coordinated Agile sprints across dev, DevOps, QA, and business teams to hit every committed deliverable</li>
+            </ul>
+            <div class="tl-item__stats">
+              <div class="stat"><strong>40%</strong><span>faster partner onboarding</span></div>
+              <div class="stat"><strong>70%</strong><span>less manual migration effort</span></div>
+              <div class="stat"><strong>95%+</strong><span>data accuracy</span></div>
+              <div class="stat"><strong>50%</strong><span>faster issue detection</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tl-item reveal" data-severity="genai">
+          <div class="tl-item__rail"><span class="tl-item__dot"></span></div>
+          <div class="tl-item__content panel">
+            <div class="tl-item__top">
+              <span class="tl-tag tl-tag--genai">PARALLEL ROLE</span>
+              <span class="tl-item__date">Jun 2023 — Present</span>
+            </div>
+            <h3 class="tl-item__role">Generative AI Innovation Lead</h3>
+            <p class="tl-item__org">Tata Consultancy Services · Chennai</p>
+            <p class="tl-item__desc">
+              Running enterprise GenAI initiatives alongside SRE duties — designing secure,
+              scalable AI platforms and automation for hospitality operations. Full breakdown in the
+              <a href="#genai">GenAI Lab</a> section below.
+            </p>
+            <ul class="tl-item__list">
+              <li>Delivered enterprise GenAI solutions with Azure OpenAI, OpenAI, and agentic AI frameworks</li>
+              <li>Built RAG applications, AI assistants, and synthetic data generation platforms</li>
+              <li>Led 9 AI proof-of-concepts from ideation to production, plus client demos and innovation workshops</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tl-item reveal" data-severity="techno">
+          <div class="tl-item__rail"><span class="tl-item__dot"></span></div>
+          <div class="tl-item__content panel">
+            <div class="tl-item__top">
+              <span class="tl-tag">TECHNO-FUNCTIONAL LEAD</span>
+              <span class="tl-item__date">Apr 2022 — Jun 2025</span>
+            </div>
+            <h3 class="tl-item__role">Techno-Functional Lead (Incident Management)</h3>
+            <p class="tl-item__org">Tata Consultancy Services · Chennai</p>
+            <p class="tl-item__desc">
+              Owned production support for enterprise reservation platforms — Sev1/Sev2 bridge
+              calls, RCA, and the observability rebuild that made the next incident easier to catch.
+            </p>
+            <ul class="tl-item__list">
+              <li>Led bridge calls for Severity 1 / Severity 2 incidents across multiple technology teams</li>
+              <li>Rebuilt observability using Splunk and Dynatrace dashboards, alerts, and monitoring strategy</li>
+              <li>Automated incident notification workflows with Microsoft Power Automate; mentored engineers</li>
+            </ul>
+            <div class="tl-item__stats">
+              <div class="stat"><strong>99.9%</strong><span>availability</span></div>
+              <div class="stat"><strong>-40%</strong><span>MTTR</span></div>
+              <div class="stat"><strong>-50%</strong><span>L3 escalations</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tl-item reveal" data-severity="early">
+          <div class="tl-item__rail"><span class="tl-item__dot"></span></div>
+          <div class="tl-item__content panel">
+            <div class="tl-item__top">
+              <span class="tl-tag">L2 SUPPORT</span>
+              <span class="tl-item__date">Jul 2019 — Mar 2022</span>
+            </div>
+            <h3 class="tl-item__role">Incident Management Specialist</h3>
+            <p class="tl-item__org">Tata Consultancy Services · Chennai</p>
+            <p class="tl-item__desc">
+              Level-2 production support for enterprise reservation platforms — the years that
+              taught the instincts everything after was built on.
+            </p>
+            <ul class="tl-item__list">
+              <li>Managed high-priority incidents affecting reservation systems within SLA</li>
+              <li>Documented resolutions, SOPs, and knowledge articles; trained new associates</li>
+            </ul>
+            <div class="tl-item__stats">
+              <div class="stat"><strong>100%</strong><span>SLA compliance</span></div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GENAI LAB ============ -->
+  <section class="section" id="genai">
+    <div class="section__inner">
+      <div class="section__head reveal">
+        <span class="section__num">03</span>
+        <h2 class="section__title">GenAI Lab</h2>
+        <p class="section__sub">nine proof-of-concepts built alongside a full-time SRE role — filter by stack</p>
+      </div>
+
+      <div class="filter-row reveal" id="filterRow">
+        <button class="filter-chip is-active" data-filter="all">all</button>
+        <button class="filter-chip" data-filter="rag">RAG</button>
+        <button class="filter-chip" data-filter="langchain">LangChain</button>
+        <button class="filter-chip" data-filter="azure">Azure OpenAI</button>
+        <button class="filter-chip" data-filter="automation">Automation</button>
+      </div>
+
+      <div class="poc-grid" id="pocGrid">
+
+        <article class="poc-card reveal" data-tags="rag langchain azure">
+          <div class="poc-card__index">01</div>
+          <h3 class="poc-card__title">Pricing Application Chatbot</h3>
+          <p class="poc-card__desc">Conversational support chatbot backed by a RAG knowledge base built from pricing docs, FAQs, and support artifacts — with dynamic knowledge base updates.</p>
+          <div class="poc-card__tags"><span>Azure OpenAI</span><span>LangChain</span><span>RAG</span><span>Vector DB</span></div>
+        </article>
+
+        <article class="poc-card reveal" data-tags="azure">
+          <div class="poc-card__index">02</div>
+          <h3 class="poc-card__title">GenAI Test Case Scenario Generation</h3>
+          <p class="poc-card__desc">LLM-powered generation of functional reservation test scenarios from business rules — standardized coverage for QA at scale.</p>
+          <div class="poc-card__tags"><span>Azure OpenAI</span><span>Python</span><span>LLMs</span></div>
+        </article>
+
+        <article class="poc-card reveal" data-tags="automation azure">
+          <div class="poc-card__index">03</div>
+          <h3 class="poc-card__title">Synthetic Test Data Generation</h3>
+          <p class="poc-card__desc">GenAI-created realistic reservation test data, integrated directly into the TOSCA automation framework for reservation creation.</p>
+          <div class="poc-card__tags"><span>Azure OpenAI</span><span>TOSCA</span><span>Automation</span></div>
+        </article>
+
+        <article class="poc-card reveal" data-tags="rag langchain azure">
+          <div class="poc-card__index">04</div>
+          <h3 class="poc-card__title">KT Video → Technical Documentation</h3>
+          <p class="poc-card__desc">Converts knowledge-transfer recordings into structured docs — Whisper transcription, summarization, and RAG-powered Q&amp;A over the result.</p>
+          <div class="poc-card__tags"><span>Azure OpenAI</span><span>Whisper</span><span>OCR</span><span>RAG</span></div>
+        </article>
+
+        <article class="poc-card reveal" data-tags="rag langchain azure">
+          <div class="poc-card__index">05</div>
+          <h3 class="poc-card__title">AI Source Code Documentation Assistant</h3>
+          <p class="poc-card__desc">Auto-generates technical documentation from source code and exposes it through a conversational chat interface across languages.</p>
+          <div class="poc-card__tags"><span>Python</span><span>Azure OpenAI</span><span>LangChain</span><span>RAG</span></div>
+        </article>
+
+        <article class="poc-card reveal" data-tags="langchain">
+          <div class="poc-card__index">06</div>
+          <h3 class="poc-card__title">GenAI Exploratory Data Analysis Platform</h3>
+          <p class="poc-card__desc">Natural-language interface over structured and unstructured datasets — profiling, visualization, anomaly detection, and generated insight reports.</p>
+          <div class="poc-card__tags"><span>Python</span><span>Pandas</span><span>Plotly</span><span>Streamlit</span></div>
+        </article>
+
+        <article class="poc-card reveal" data-tags="langchain azure automation">
+          <div class="poc-card__index">07</div>
+          <h3 class="poc-card__title">AI Group Sales Booking Assistant</h3>
+          <p class="poc-card__desc">Reads inbound group-booking emails, extracts guest count / dates / location, chases missing details automatically, and outputs structured JSON.</p>
+          <div class="poc-card__tags"><span>Python</span><span>Azure OpenAI</span><span>LangChain</span><span>REST APIs</span></div>
+        </article>
+
+        <article class="poc-card reveal" data-tags="automation">
+          <div class="poc-card__index">08</div>
+          <h3 class="poc-card__title">Alexa Hotel Food Ordering Assistant</h3>
+          <p class="poc-card__desc">Voice-enabled food ordering for hotel guests, integrated with restaurant ordering systems for order capture, confirmation, and status updates.</p>
+          <div class="poc-card__tags"><span>Alexa Skills Kit</span><span>AWS Lambda</span><span>Python</span></div>
+        </article>
+
+        <article class="poc-card reveal" data-tags="rag langchain azure">
+          <div class="poc-card__index">09</div>
+          <h3 class="poc-card__title">AI Test Step Generation Copilot</h3>
+          <p class="poc-card__desc">Expands high-level test summaries into detailed test steps using certified historical cases and RAG-backed procedure recommendations.</p>
+          <div class="poc-card__tags"><span>Azure OpenAI</span><span>LangChain</span><span>RAG</span></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section section--alt" id="skills">
+    <div class="section__inner">
+      <div class="section__head reveal">
+        <span class="section__num">04</span>
+        <h2 class="section__title">System Modules</h2>
+        <p class="section__sub">the stack, grouped like services in a runbook</p>
+      </div>
+
+      <div class="modules" id="modules">
+        <div class="module reveal">
+          <div class="module__head"><span class="module__status"></span><h3>Generative AI &amp; AI/ML</h3></div>
+          <div class="module__tags">
+            <span>GPT-4 / 4o</span><span>Azure OpenAI</span><span>Agentic AI</span><span>RAG</span><span>MCP</span><span>LangChain</span><span>LangGraph</span><span>Prompt Engineering</span>
+          </div>
+        </div>
+        <div class="module reveal">
+          <div class="module__head"><span class="module__status"></span><h3>Site Reliability Engineering</h3></div>
+          <div class="module__tags">
+            <span>Incident Management</span><span>Problem Management</span><span>RCA</span><span>Service Restoration</span><span>SLA/SLO Monitoring</span><span>Change &amp; Release</span>
+          </div>
+        </div>
+        <div class="module reveal">
+          <div class="module__head"><span class="module__status"></span><h3>Observability &amp; Monitoring</h3></div>
+          <div class="module__tags">
+            <span>Dynatrace</span><span>Splunk</span><span>GlassBox</span><span>Dashboards</span><span>Alerting</span><span>Log Analysis</span>
+          </div>
+        </div>
+        <div class="module reveal">
+          <div class="module__head"><span class="module__status"></span><h3>Cloud &amp; Platform</h3></div>
+          <div class="module__tags">
+            <span>AWS</span><span>Kubernetes</span><span>Docker</span><span>Harness CI/CD</span><span>SSO</span><span>DNS</span><span>Couchbase</span><span>Couchbase Capella</span><span>DocumentDB</span>
+          </div>
+        </div>
+        <div class="module reveal">
+          <div class="module__head"><span class="module__status"></span><h3>Languages &amp; Queries</h3></div>
+          <div class="module__tags">
+            <span>Python</span><span>Java Spring</span><span>SQL</span><span>DAX</span><span>DQL</span><span>DPL</span>
+          </div>
+        </div>
+        <div class="module reveal">
+          <div class="module__head"><span class="module__status"></span><h3>Automation &amp; Analytics</h3></div>
+          <div class="module__tags">
+            <span>Power Automate</span><span>Power BI</span>
+          </div>
+        </div>
+        <div class="module reveal">
+          <div class="module__head"><span class="module__status"></span><h3>DevOps &amp; Collaboration</h3></div>
+          <div class="module__tags">
+            <span>Git</span><span>Jira</span><span>ServiceNow</span><span>Confluence</span><span>Agile Scrum</span><span>Sprint Planning</span>
+          </div>
+        </div>
+        <div class="module reveal">
+          <div class="module__head"><span class="module__status"></span><h3>Integration</h3></div>
+          <div class="module__tags">
+            <span>APIs</span><span>Microservices</span><span>Kafka</span><span>Message Queues</span>
+          </div>
+        </div>
+        <div class="module reveal">
+          <div class="module__head"><span class="module__status"></span><h3>AI Productivity Tools</h3></div>
+          <div class="module__tags">
+            <span>Microsoft Copilot</span><span>Google Gemini</span><span>Claude AI</span><span>Atlassian Rovo AI</span><span>BigPanda Biggy AI</span><span>Cursor AI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATIONS ============ -->
+  <section class="section" id="certifications">
+    <div class="section__inner">
+      <div class="section__head reveal">
+        <span class="section__num">05</span>
+        <h2 class="section__title">Certifications</h2>
+        <p class="section__sub">validity tracked like everything else worth tracking</p>
+      </div>
+
+      <div class="cert-grid" id="certGrid">
+        <div class="cert reveal" data-start="2025" data-end="2028">
+          <div class="cert__top"><h3>AWS Certified Solutions Architect – Associate</h3><span class="cert__badge">AWS</span></div>
+          <div class="cert__id">7d71d744f3ef4837ad1be817f00ee860</div>
+          <div class="cert__range"><span>Jun 2025</span><span>Jun 2028</span></div>
+          <div class="cert__bar"><div class="cert__bar-fill" data-fill></div></div>
+        </div>
+        <div class="cert reveal" data-start="2025" data-end="2028">
+          <div class="cert__top"><h3>AWS Certified AI Practitioner</h3><span class="cert__badge">AWS</span></div>
+          <div class="cert__id">2dec7f3f3fb2474e87e0d32cfc15e85a</div>
+          <div class="cert__range"><span>Feb 2025</span><span>Feb 2028</span></div>
+          <div class="cert__bar"><div class="cert__bar-fill" data-fill></div></div>
+        </div>
+        <div class="cert reveal" data-start="2024" data-end="2024">
+          <div class="cert__top"><h3>Tableau Desktop Specialist</h3><span class="cert__badge">Tableau</span></div>
+          <div class="cert__id">T000141370</div>
+          <div class="cert__range"><span>Mar 2024</span><span>issued</span></div>
+          <div class="cert__bar"><div class="cert__bar-fill" data-fill data-static="100"></div></div>
+        </div>
+        <div class="cert reveal" data-start="2024" data-end="2024">
+          <div class="cert__top"><h3>Python for Data Science Professional</h3><span class="cert__badge">Edureka</span></div>
+          <div class="cert__id">KNH97F982</div>
+          <div class="cert__range"><span>Jan 2024</span><span>issued</span></div>
+          <div class="cert__bar"><div class="cert__bar-fill" data-fill data-static="100"></div></div>
+        </div>
+        <div class="cert reveal" data-start="2023" data-end="2023">
+          <div class="cert__top"><h3>Certified Entry-Level Python Programmer</h3><span class="cert__badge">Python Institute</span></div>
+          <div class="cert__id">nQ7X.34wN.09eK</div>
+          <div class="cert__range"><span>Nov 2023</span><span>issued</span></div>
+          <div class="cert__bar"><div class="cert__bar-fill" data-fill data-static="100"></div></div>
+        </div>
+        <div class="cert reveal" data-start="2021" data-end="2021">
+          <div class="cert__top"><h3>Microsoft Certified: Azure Fundamentals</h3><span class="cert__badge">Microsoft</span></div>
+          <div class="cert__id">H780-1500</div>
+          <div class="cert__range"><span>May 2021</span><span>issued</span></div>
+          <div class="cert__bar"><div class="cert__bar-fill" data-fill data-static="100"></div></div>
+        </div>
+      </div>
+
+      <details class="internal-certs reveal">
+        <summary>Internal TCS certifications (11) — click to expand</summary>
+        <ul>
+          <li><span>Software Security Awareness for Managers — Module 1 &amp; 2</span><time>Nov 2025</time></li>
+          <li><span>GenAI: AWS Generative AI Series Learning</span><time>Jul 2025</time></li>
+          <li><span>AI Experience Zone — Google Intermediate Curriculum</span><time>Dec 2024</time></li>
+          <li><span>Solution Xpert — AI/ML E2 Stream 2 Curriculum</span><time>Aug 2024</time></li>
+          <li><span>Digital: Python for Data Science</span><time>Dec 2023</time></li>
+          <li><span>Digital: Natural Language Processing</span><time>Dec 2023</time></li>
+          <li><span>Foundation Generative AI</span><time>Dec 2023</time></li>
+          <li><span>Leadership: Managing Secure Delivery &amp; Operations</span><time>Oct 2023</time></li>
+          <li><span>Generative AI Foundation Curriculum</span><time>Oct 2023</time></li>
+          <li><span>Business English Certification</span><time>Sep 2022</time></li>
+          <li><span>MFDM™ AI Aware Certification</span><time>Mar 2020</time></li>
+          <li><span>ITIL Foundation Certification</span><time>Sep 2019</time></li>
+        </ul>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ AWARDS ============ -->
+  <section class="section section--alt" id="awards">
+    <div class="section__inner">
+      <div class="section__head reveal">
+        <span class="section__num">06</span>
+        <h2 class="section__title">Recognition</h2>
+        <p class="section__sub">18 awards, 2021 – 2026</p>
+      </div>
+
+      <div class="marquee reveal" id="marquee">
+        <div class="marquee__track">
+          <span>Best Team Award '25</span><span>·</span>
+          <span>Star of the Quarter — Apr '25 &amp; Nov '25</span><span>·</span>
+          <span>Star Performer, TTH Americas (Unit Level) '24</span><span>·</span>
+          <span>Service &amp; Commitment Award '24</span><span>·</span>
+          <span>Technical Excellence Award '23</span><span>·</span>
+          <span>Beyond Excellence Award '23</span><span>·</span>
+          <span>Special Initiative Award — '22 · '25 (×3) · '26</span><span>·</span>
+          <span>On The Spot Award — '21 · '22 · '25</span><span>·</span>
+          <span>Gold &amp; Silver Certificate, Corporate Maitree '21 &amp; '22</span><span>·</span>
+          <!-- duplicate for seamless loop -->
+          <span>Best Team Award '25</span><span>·</span>
+          <span>Star of the Quarter — Apr '25 &amp; Nov '25</span><span>·</span>
+          <span>Star Performer, TTH Americas (Unit Level) '24</span><span>·</span>
+          <span>Service &amp; Commitment Award '24</span><span>·</span>
+          <span>Technical Excellence Award '23</span><span>·</span>
+          <span>Beyond Excellence Award '23</span><span>·</span>
+          <span>Special Initiative Award — '22 · '25 (×3) · '26</span><span>·</span>
+          <span>On The Spot Award — '21 · '22 · '25</span><span>·</span>
+          <span>Gold &amp; Silver Certificate, Corporate Maitree '21 &amp; '22</span><span>·</span>
+        </div>
+      </div>
+
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <span class="edu-card__eyebrow">Education</span>
+          <h3>Master of Business Administration — Technology Management</h3>
+          <p>Anna University, Chennai (Distance Ed.) · May 2021 – Jun 2023</p>
+        </div>
+        <div class="edu-card reveal">
+          <span class="edu-card__eyebrow">Education</span>
+          <h3>B.E., Electrical &amp; Electronics Engineering</h3>
+          <p>K. Ramakrishnan College of Technology, Trichy · Jul 2015 – Apr 2019</p>
+        </div>
+        <div class="edu-card reveal">
+          <span class="edu-card__eyebrow">Beyond the desk</span>
+          <h3>Secretary, Muththamizh Mandram · Vice Chairman, IEEE Student Chapter</h3>
+          <p>Head of Compering Club · Symposium &amp; workshop coordinator</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="section__inner">
+      <div class="contact__panel reveal panel">
+        <div class="status-panel__bar">
+          <div class="status-panel__dots"><span></span><span></span><span></span></div>
+          <div class="status-panel__title">ping ragavan --start-conversation</div>
+        </div>
+        <div class="contact__body">
+          <p class="contact__ping" id="contactPing"></p>
+          <h2 class="contact__title">Let's build something reliable — <br> and a little intelligent.</h2>
+          <div class="contact__links">
+            <a href="mailto:djragavanm@gmail.com" class="contact__link">
+              <span class="contact__link-label">email</span>
+              <span class="contact__link-value">djragavanm@gmail.com ↗</span>
+            </a>
+            <a href="https://www.linkedin.com/in/djragavnm/" target="_blank" rel="noopener" class="contact__link">
+              <span class="contact__link-label">linkedin</span>
+              <span class="contact__link-value">/in/djragavnm ↗</span>
+            </a>
+            <a href="tel:+918940871204" class="contact__link">
+              <span class="contact__link-label">phone</span>
+              <span class="contact__link-value">+91 89408 71204 ↗</span>
+            </a>
+            <div class="contact__link">
+              <span class="contact__link-label">location</span>
+              <span class="contact__link-value">Chennai, TN, IN</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <span>© <span id="year"></span> Ragavan Durairaj</span>
+    <span class="footer__sep">·</span>
+    <span>built &amp; deployed on GitHub Pages</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
